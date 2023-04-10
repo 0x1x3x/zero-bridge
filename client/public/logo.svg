@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="107" viewBox="0 0 212 107">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 33.333px;
+        fill: #fefefe;
+        text-anchor: middle;
+        font-family: "LFT Etica Mono";
+      }
+
+      .cls-1 {
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <text id="ZERO" class="cls-1" x="118.738" y="46.653"><tspan x="118.738">ZERO</tspan></text>
+  <text id="BRIDGE" class="cls-2" x="141.738" y="84.653"><tspan x="141.738">BRIDGE</tspan></text>
+  <text id="_0" data-name="0" class="cls-2" transform="translate(51.254 60.922) scale(2.395)"><tspan x="0">0</tspan></text>
+  <text id="_0_copy" data-name="0 copy" class="cls-2" transform="translate(24.254 100.922) scale(2.395)"><tspan x="0">0</tspan></text>
+</svg>
