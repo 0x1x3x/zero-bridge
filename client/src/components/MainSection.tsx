@@ -4,9 +4,9 @@ import { AiFillPlayCircle } from 'react-icons/ai';
 import { SiEthereum } from 'react-icons/si';
 import { BsInfoCircle } from 'react-icons/bs';
 
-import { Loader } from './';
+import { Loader } from '.';
 
-const Welcome = () => {
+const MainSection = () => {
   interface InputProps {
     placeholder: string;
     name: string;
@@ -35,11 +35,14 @@ const Welcome = () => {
       className='w-full my-2 p-2 rounded-sm outline-none bg-transparent text-sm text-[#acacac] border'
     />
   );
+
   const handleConnectWallet = () => {};
 
+  const handleSubmit = () => {};
+
   return (
-    <section className='py-2 px-4 flex justify-center items-center'>
-      <div className='flex flex-col md:flex-row items-start justify-between py-12'>
+    <section>
+      <div className='flex flex-col md:flex-row items-start justify-between py-4 lg:py-12'>
         <div className='flex flex-1 justify-start flex-col md:mr-10'>
           <h1 className='text-4xl sm:text-6xl text-white text-gradient'>
             Send Crypto <br /> Simple and Fast
@@ -55,12 +58,12 @@ const Welcome = () => {
           <button
             type='button'
             onClick={handleConnectWallet}
-            className='flex flex-row justify-center items-center my-8 w-4/12 rounded-full text-sm text-black bg-[#ff33ff] hover:bg-[#fa5afa] cursor-pointer py-2 px-4'
+            className='flex flex-row justify-center items-center my-8 w-full lg:w-4/12 rounded-full text-sm text-black bg-[#ff33ff] hover:bg-[#fa5afa] cursor-pointer py-2 px-4'
           >
             CONNECT WALLET
           </button>
 
-          <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10'>
+          <div className='grid sm:grid-cols-3 grid-cols-2 w-full lg:mt-10'>
             <div className={`rounded-tl-2xl ${percsStyle}`}>Reliability</div>
             <div className={percsStyle}>Security</div>
             <div className={`sm:rounded-tr-2xl ${percsStyle}`}>Ethereum</div>
@@ -71,7 +74,7 @@ const Welcome = () => {
         </div>
 
         <div className='flex flex-col flex-1 items-center justify-start w-full'>
-          <div className='p-3 justify-end items-start flex-col rounded-xl h-56 sm:w-96 w-full my-5  white-glassmorphism'>
+          <div className='w-full sm:w-96 h-56 p-3 justify-end items-start flex-col rounded-xl my-5 white-glassmorphism'>
             <div className='flex justify-between flex-col w-full h-full '>
               <div className='flex justify-between items-start'>
                 <div className='w-10 h-10 rounded-full border border-white flex justify-center items-center'>
@@ -85,15 +88,44 @@ const Welcome = () => {
                 </p>
               </div>
             </div>
-
-            <div className='w-full mt-4 p-5 flex flex-col justify-start items-center '>
-              <Input
-                placeholder='Address To'
-                name='addressTo'
-                type='text'
-                handleChange={() => {}}
-              />
-            </div>
+          </div>
+          <div className='w-full sm:w-96 mt-3 flex flex-col justify-start items-center'>
+            <Input
+              placeholder='Address To'
+              name='addressTo'
+              type='text'
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder='Amount'
+              name='amount'
+              type='text'
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder='Keyword (GIF)'
+              name='keyword'
+              type='text'
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder='Message'
+              name='message'
+              type='text'
+              handleChange={() => {}}
+            />
+            <div className='h-[1px] w-full bg-gray-200 my-2' />
+            {false ? (
+              <Loader />
+            ) : (
+              <button
+                type='button'
+                onClick={handleSubmit}
+                className='text-white text-sm w-full mt-2 border p-2 rounded-full cursor-pointer'
+              >
+                SEND NOW
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -101,4 +133,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default MainSection;

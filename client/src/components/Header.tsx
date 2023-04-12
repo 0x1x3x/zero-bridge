@@ -1,8 +1,8 @@
 import logo from '/logo.svg';
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <nav className='flex flex-row justify-between items-center py-2 px-4'>
+    <header>
       <div className='flex flex-row items-center'>
         <img src={logo} alt='Logo' className='w-24 cursor-pointer' />
         <ul className='flex flex-row justify-between items-center flex-initial ml-10 lg:ml-14 gap-6 lg:gap-8'>
@@ -21,8 +21,8 @@ const Navbar = () => {
       <button className='hidden sm:block rounded-full text-sm text-black bg-[#ff33ff] hover:bg-[#fa5afa] cursor-pointer py-2 px-4'>
         CONNECT WALLET
       </button>
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

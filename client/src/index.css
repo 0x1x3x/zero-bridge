@@ -4,12 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* html {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0 auto;
   font-family: 'LFT Etica Mono', sans-serif;
@@ -17,6 +18,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #121615;
   color: white;
+}
+
+header,
+footer {
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  height: calc(100vh - 160px);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-gradient {

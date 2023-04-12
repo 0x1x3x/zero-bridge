@@ -1,14 +1,20 @@
-import { Navbar, Welcome, Services, Transactions, Footer } from './components';
+import {
+  Header,
+  MainSection,
+  Services,
+  Transactions,
+  Footer,
+} from './components';
 
 const App = () => {
   return (
-    <div className='min-h-screen lg:mx-[10%] lg:mt-4'>
-      <Navbar />
-      <Welcome />
+    <div className='lg:mx-[10%]'>
+      <Header />
+      <MainSection />
 
       {/* <Services />
-      <Transactions />
-      <Footer /> */}
+      <Transactions />*/}
+      <Footer />
     </div>
   );
 };
