@@ -19,11 +19,7 @@ declare global {
 const getEthereumContract = () => {
   const provider = new Web3Provider(window.ethereum);
   const signer = provider.getSigner();
-  const transactionContract = new Contract(
-    contractAddress,
-    contractABI,
-    signer
-  );
+  const transactionContract = new Contract(contractAddress, contractABI); //добавить signer
 
   console.log({ provider, signer, transactionContract });
 };
