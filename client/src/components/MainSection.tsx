@@ -1,12 +1,14 @@
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent, FC, useContext } from 'react';
 
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { SiEthereum } from 'react-icons/si';
 import { BsInfoCircle } from 'react-icons/bs';
 
+import { TransactionsContext } from '../context/TransactionsContext';
 import { Loader } from '.';
 
 const MainSection = () => {
+  const { connectWallet, currentAccount } = useContext(TransactionsContext);
   interface InputProps {
     placeholder: string;
     name: string;
@@ -36,8 +38,6 @@ const MainSection = () => {
     />
   );
 
-  const handleConnectWallet = () => {};
-
   const handleSubmit = () => {};
 
   return (
@@ -55,13 +55,15 @@ const MainSection = () => {
             to the world of digital currencies, Zero Bridge is an excellent
             choice for hassle-free crypto transactions.
           </p>
-          <button
-            type='button'
-            onClick={handleConnectWallet}
-            className='flex flex-row justify-center items-center my-8 w-full lg:w-4/12 rounded-full text-sm text-black bg-[#ff33ff] hover:bg-[#fa5afa] cursor-pointer py-2 px-4'
-          >
-            CONNECT WALLET
-          </button>
+          {!currentAccount && (
+            <button
+              type='button'
+              onClick={connectWallet}
+              className='flex flex-row justify-center items-center my-8 w-full lg:w-4/12 rounded-full text-sm text-black bg-[#ff33ff] hover:bg-[#fa5afa] cursor-pointer py-2 px-4'
+            >
+              CONNECT WALLET
+            </button>
+          )}
 
           <div className='grid sm:grid-cols-3 grid-cols-2 w-full lg:mt-10'>
             <div className={`rounded-tl-2xl ${percsStyle}`}>Reliability</div>

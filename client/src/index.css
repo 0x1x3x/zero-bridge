@@ -30,6 +30,7 @@ footer {
   align-items: center;
 }
 
+/* ПОФИКСИТЬ ВЫСОТУ ПОД МОБИЛЫ */
 section {
   height: calc(100vh - 160px);
   padding: 1rem;
