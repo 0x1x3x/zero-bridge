@@ -30,13 +30,18 @@ footer {
   align-items: center;
 }
 
-/* ПОФИКСИТЬ ВЫСОТУ ПОД МОБИЛЫ */
 section {
-  height: calc(100vh - 160px);
+  height: 100%;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (min-width: 780px) {
+  section {
+    height: calc(100vh - 160px);
+  }
 }
 
 .text-gradient {
