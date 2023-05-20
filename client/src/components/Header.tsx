@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <div className='flex flex-row items-center'>
-        <img src={logo} alt='Logo' className='w-24 cursor-pointer' />
+        <img src={logo} alt='Logo' className='w-14 cursor-pointer' />
         <ul className='flex flex-row justify-between items-center flex-initial ml-10 lg:ml-14 gap-6 lg:gap-8'>
           <li className='text-[#acacac] hover:text-white cursor-pointer'>
             Transfer
